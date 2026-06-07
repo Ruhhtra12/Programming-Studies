@@ -2,33 +2,24 @@
 #include <string.h>
 int main()
 {
-    int i,N;
-    scanf("%d",&N);
-    char arrayOfStrings[N][51];
-    for (i = 0; i < N; i++)
+    int i,II, N;
+    scanf("%d", &N);
+    for (II = 0; II < N; II++)
     {
-        int II;
-        char temp[2][51];
-        char result[51];
-        II = 0;
-        scanf(" %s",&arrayOfStrings[i]);
-        char *token = strtok(arrayOfStrings[i], " ");
-        while (token != NULL)
+        char a[55], b[55];
+        scanf(" %s %s", a, b);
+        for (i = 0; (a[i] != '\0' || b[i] != '\0') ; i++) 
         {
-            strcpy(temp[II],token);
-            token = strtok(NULL, " ");
-            II++;
+            if (i < strlen(a))
+            {
+                printf("%c",a[i]);
+            }
+            if (i < strlen(b))
+            {
+                printf("%c",b[i]);
+            }
         }
-        strcat(result,temp[0][0]);
-        strcat(result,temp[1][0]);
-        for (II = 0; II < ; II++)
-        {
-            /* code */
+        printf("\n");
         }
-        
-
-        printf("%s\n", result);
-    }
-    
     return 0;
 }
